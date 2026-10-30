@@ -21,11 +21,17 @@ public class TransactionService {
 
 
     public List<Transaction> findAll() {
-        return transactionRepository.findAll();
+        List<Transaction> transactions = transactionRepository.findAll();
+        transactions.forEach(transaction -> transaction.setAccount(
+                accountRestClient.getAccountById(transaction.getAccountId())));
+        return transactions;
     }
 
     public Transaction findById(UUID id) {
-        return transactionRepository.findById(id).orElseThrow(() -> new RuntimeException("Transaction not found"));
+        Transaction transaction = transactionRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Transaction not found"));
+        transaction.setAccount(accountRestClient.getAccountById(transaction.getAccountId()));
+        return transaction;
     }
 
 
