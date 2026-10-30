@@ -9,7 +9,6 @@ import java.util.UUID;
 public class AccountRestClientFallback implements AccountRestClient {
     @Override
     public Account getAccountById(UUID id) {
-        // Account details are unavailable; callers can still return the transaction itself.
         return null;
     }
 }

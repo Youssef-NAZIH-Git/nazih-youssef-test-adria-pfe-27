@@ -4,10 +4,12 @@ import nazih.youssef.transactionservice.entities.Transaction;
 import nazih.youssef.transactionservice.feign.AccountRestClient;
 import nazih.youssef.transactionservice.model.Account;
 import nazih.youssef.transactionservice.repositories.TransactionRepository;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
 
@@ -15,10 +17,13 @@ import java.util.UUID;
 public class TransactionService {
     private final TransactionRepository transactionRepository;
     private final AccountRestClient accountRestClient;
+    private final BigDecimal maxAmount;
 
-    public TransactionService(TransactionRepository transactionRepository, AccountRestClient accountRestClient) {
+    public TransactionService(TransactionRepository transactionRepository, AccountRestClient accountRestClient,
+                              @Value("${bank.transaction.max-amount}") BigDecimal maxAmount) {
         this.transactionRepository = transactionRepository;
         this.accountRestClient = accountRestClient;
+        this.maxAmount = maxAmount;
     }
 
 
@@ -38,6 +43,15 @@ public class TransactionService {
 
 
     public Transaction saveTransaction(Transaction transaction) {
+        if (transaction.getAmount() == null || transaction.getAmount().signum() <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+                    "Transaction amount must be strictly positive");
+        }
+        if (transaction.getAmount().compareTo(maxAmount) > 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+                    "Transaction amount exceeds the configured limit of " + maxAmount);
+        }
+
         Account account = accountRestClient.getAccountById(transaction.getAccountId());
 
         if (account == null) {

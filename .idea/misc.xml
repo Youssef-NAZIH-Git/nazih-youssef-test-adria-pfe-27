@@ -10,6 +10,8 @@
         <option value="$PROJECT_DIR$/discovery-service/pom.xml" />
         <option value="$PROJECT_DIR$/adria-pfe/gateway-service/pom.xml" />
         <option value="$PROJECT_DIR$/adria-pfe/discovery-service/pom.xml" />
+        <option value="$PROJECT_DIR$/adria-pfe/config-service/pom.xml" />
+        <option value="$PROJECT_DIR$/adria-pfe/bot-service/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
