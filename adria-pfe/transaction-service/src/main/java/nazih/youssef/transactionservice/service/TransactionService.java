@@ -1,9 +1,9 @@
-package nazih.youssef.transactionservice.services;
+package nazih.youssef.transactionservice.service;
 
-import nazih.youssef.transactionservice.entities.Transaction;
+import nazih.youssef.transactionservice.domain.Account;
+import nazih.youssef.transactionservice.domain.Transaction;
 import nazih.youssef.transactionservice.feign.AccountRestClient;
-import nazih.youssef.transactionservice.model.Account;
-import nazih.youssef.transactionservice.repositories.TransactionRepository;
+import nazih.youssef.transactionservice.repository.TransactionRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;

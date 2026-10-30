@@ -1,8 +1,8 @@
-package nazih.youssef.transactionservice.controllers;
+package nazih.youssef.transactionservice.web.rest;
 
 
-import nazih.youssef.transactionservice.entities.Transaction;
-import nazih.youssef.transactionservice.services.TransactionService;
+import nazih.youssef.transactionservice.domain.Transaction;
+import nazih.youssef.transactionservice.service.TransactionService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

@@ -1,11 +1,10 @@
-package nazih.youssef.accountservice.entities;
+package nazih.youssef.accountservice.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
-import nazih.youssef.accountservice.enums.AccountStatus;
 
 import java.util.UUID;
 

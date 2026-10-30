@@ -1,4 +1,4 @@
-package nazih.youssef.transactionservice.entities;
+package nazih.youssef.transactionservice.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,7 +6,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Transient;
 import lombok.*;
-import nazih.youssef.transactionservice.model.Account;
 
 import java.math.BigDecimal;
 import java.time.Instant;

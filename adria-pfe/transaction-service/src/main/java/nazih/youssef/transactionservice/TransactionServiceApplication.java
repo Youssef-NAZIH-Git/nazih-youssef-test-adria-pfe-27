@@ -1,7 +1,7 @@
 package nazih.youssef.transactionservice;
 
-import nazih.youssef.transactionservice.entities.Transaction;
-import nazih.youssef.transactionservice.services.TransactionService;
+import nazih.youssef.transactionservice.domain.Transaction;
+import nazih.youssef.transactionservice.service.TransactionService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

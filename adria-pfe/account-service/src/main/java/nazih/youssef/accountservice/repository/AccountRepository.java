@@ -1,6 +1,6 @@
-package nazih.youssef.accountservice.repositories;
+package nazih.youssef.accountservice.repository;
 
-import nazih.youssef.accountservice.entities.Account;
+import nazih.youssef.accountservice.domain.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

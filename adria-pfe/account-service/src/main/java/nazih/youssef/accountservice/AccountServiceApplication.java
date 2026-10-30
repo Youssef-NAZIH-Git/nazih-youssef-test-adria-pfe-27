@@ -1,8 +1,8 @@
 package nazih.youssef.accountservice;
 
-import nazih.youssef.accountservice.entities.Account;
-import nazih.youssef.accountservice.enums.AccountStatus;
-import nazih.youssef.accountservice.services.AccountService;
+import nazih.youssef.accountservice.domain.Account;
+import nazih.youssef.accountservice.domain.AccountStatus;
+import nazih.youssef.accountservice.service.AccountService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

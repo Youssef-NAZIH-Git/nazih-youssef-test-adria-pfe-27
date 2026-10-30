@@ -1,4 +1,4 @@
-package nazih.youssef.transactionservice.model;
+package nazih.youssef.transactionservice.domain;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
 package nazih.youssef.transactionservice.feign;
 
-import nazih.youssef.transactionservice.model.Account;
+import nazih.youssef.transactionservice.domain.Account;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;

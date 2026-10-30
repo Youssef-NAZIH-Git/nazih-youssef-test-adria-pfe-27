@@ -1,8 +1,8 @@
-package nazih.youssef.accountservice.controllers;
+package nazih.youssef.accountservice.web.rest;
 
 
-import nazih.youssef.accountservice.entities.Account;
-import nazih.youssef.accountservice.services.AccountService;
+import nazih.youssef.accountservice.domain.Account;
+import nazih.youssef.accountservice.service.AccountService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

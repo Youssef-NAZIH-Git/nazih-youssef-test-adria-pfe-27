@@ -1,7 +1,7 @@
-package nazih.youssef.accountservice.services;
+package nazih.youssef.accountservice.service;
 
-import nazih.youssef.accountservice.entities.Account;
-import nazih.youssef.accountservice.repositories.AccountRepository;
+import nazih.youssef.accountservice.domain.Account;
+import nazih.youssef.accountservice.repository.AccountRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

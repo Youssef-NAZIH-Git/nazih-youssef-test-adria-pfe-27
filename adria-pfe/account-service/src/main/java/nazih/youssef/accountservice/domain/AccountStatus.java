@@ -1,4 +1,4 @@
-package nazih.youssef.accountservice.enums;
+package nazih.youssef.accountservice.domain;
 
 public enum AccountStatus {
     ACTIVE,
