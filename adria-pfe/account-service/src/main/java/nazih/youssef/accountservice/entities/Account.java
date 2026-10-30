@@ -7,11 +7,13 @@ import jakarta.persistence.Id;
 import lombok.*;
 import nazih.youssef.accountservice.enums.AccountStatus;
 
+import java.util.UUID;
+
 @Entity
 @AllArgsConstructor @NoArgsConstructor @Data @Builder @Getter @Setter
 public class Account {
-    @Id @GeneratedValue(strategy= GenerationType.UUID)
-    private String id;
+    @Id @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
     private String customerReference;
     private AccountStatus status;
     private String currency;
