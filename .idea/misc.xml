@@ -7,7 +7,15 @@
         <option value="$PROJECT_DIR$/adria-pfe/pom.xml" />
         <option value="$PROJECT_DIR$/adria-pfe/account-service/pom.xml" />
         <option value="$PROJECT_DIR$/adria-pfe/transaction-service/pom.xml" />
+        <option value="$PROJECT_DIR$/discovery-service/pom.xml" />
+        <option value="$PROJECT_DIR$/adria-pfe/gateway-service/pom.xml" />
+        <option value="$PROJECT_DIR$/adria-pfe/discovery-service/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/discovery-service/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_25" default="true" project-jdk-name="25" project-jdk-type="JavaSDK">

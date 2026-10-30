@@ -12,7 +12,7 @@ import java.util.UUID;
 @Entity
 @AllArgsConstructor @NoArgsConstructor @Data @Builder @Getter @Setter
 public class Account {
-    @Id @GeneratedValue(strategy = GenerationType.UUID)
+    @Id // Pas de generated value hna pour simplifier le debugging @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     private String customerReference;
     private AccountStatus status;

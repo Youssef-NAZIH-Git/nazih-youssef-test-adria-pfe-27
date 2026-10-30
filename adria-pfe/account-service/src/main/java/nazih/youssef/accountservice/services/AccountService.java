@@ -25,6 +25,9 @@ public class AccountService {
 
 
     public Account saveAccount(Account account) {
+        if (account.getId() == null){
+            account.setId(UUID.randomUUID());
+        }
         return accountRepository.save(account);
     }
 
