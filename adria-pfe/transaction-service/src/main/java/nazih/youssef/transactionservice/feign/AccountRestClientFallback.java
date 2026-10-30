@@ -1,0 +1,15 @@
+package nazih.youssef.transactionservice.feign;
+
+import nazih.youssef.transactionservice.model.Account;
+import org.springframework.stereotype.Component;
+
+import java.util.UUID;
+
+@Component
+public class AccountRestClientFallback implements AccountRestClient {
+    @Override
+    public Account getAccountById(UUID id) {
+        // Account details are unavailable; callers can still return the transaction itself.
+        return null;
+    }
+}

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.UUID;
 
-@FeignClient(name = "account-service")
+@FeignClient(name = "account-service", fallback = AccountRestClientFallback.class)
 public interface AccountRestClient {
     @GetMapping("/accounts/{id}")
     Account getAccountById(@PathVariable("id") UUID id);

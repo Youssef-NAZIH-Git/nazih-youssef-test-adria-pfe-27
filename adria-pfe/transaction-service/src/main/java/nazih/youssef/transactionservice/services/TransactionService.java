@@ -4,7 +4,9 @@ import nazih.youssef.transactionservice.entities.Transaction;
 import nazih.youssef.transactionservice.feign.AccountRestClient;
 import nazih.youssef.transactionservice.model.Account;
 import nazih.youssef.transactionservice.repositories.TransactionRepository;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.UUID;
@@ -38,6 +40,10 @@ public class TransactionService {
     public Transaction saveTransaction(Transaction transaction) {
         Account account = accountRestClient.getAccountById(transaction.getAccountId());
 
+        if (account == null) {
+            throw new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE,
+                    "Account service is unavailable. Please try again later.");
+        }
         if (!"ACTIVE".equals(account.getStatus())) {
             throw new RuntimeException("Account is not active");
         }
